@@ -22,12 +22,23 @@ export default function CTASection({ eyebrow, title, subtitle, primaryLabel, pri
           <p className="font-sans text-base text-white/70 leading-relaxed mb-8">{subtitle}</p>
         )}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href={primaryHref}
-            className="font-sans font-bold text-sm bg-white text-diva-pink px-8 py-3.5 rounded-full hover:bg-blush transition-colors shadow-md"
-          >
-            {primaryLabel}
-          </Link>
+          {primaryHref.startsWith("http") ? (
+            <a
+              href={primaryHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans font-bold text-sm bg-white text-diva-pink px-8 py-3.5 rounded-full hover:bg-blush transition-colors shadow-md"
+            >
+              {primaryLabel}
+            </a>
+          ) : (
+            <Link
+              href={primaryHref}
+              className="font-sans font-bold text-sm bg-white text-diva-pink px-8 py-3.5 rounded-full hover:bg-blush transition-colors shadow-md"
+            >
+              {primaryLabel}
+            </Link>
+          )}
           {secondaryLabel && secondaryHref && (
             <Link
               href={secondaryHref}
