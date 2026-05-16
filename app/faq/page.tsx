@@ -14,19 +14,23 @@ const faqGroups = [
     items: [
       {
         question: "What is Little Divas Day Spa?",
-        answer: "Little Divas Day Spa is a kids' spa and birthday party boutique in Haymarket, Virginia. We offer a range of fun, glamorous spa experiences for children — from mini manicures and facials to full birthday party packages.",
+        answer: "Little Divas Day Spa is a kids' spa and birthday party boutique in Haymarket, Virginia. We offer fun, glamorous spa experiences for children — from mini manicures and facials to full birthday party packages.",
       },
       {
-        question: "What is the minimum age for services?",
-        answer: "We welcome little divas ages 3 and up for all services and party packages.",
+        question: "What ages are appropriate for services?",
+        answer: "Little Divas is for girls of all ages! Our minimum service age is 3 years old.",
       },
       {
         question: "Are your services performed by licensed cosmetologists?",
-        answer: "No. Our services are for entertainment purposes only and are not performed by licensed cosmetologists. We focus on creating fun, confidence-building experiences for kids in a safe environment.",
+        answer: "No. Our services are for entertainment purposes only and are not performed by licensed cosmetologists. We focus on creating fun, confidence-building experiences for kids.",
       },
       {
-        question: "Are the products you use safe for kids?",
-        answer: "Yes! All products used at Little Divas Day Spa are non-toxic and kid-safe. We take safety very seriously. Please notify us of any allergies or sensitivities prior to your visit.",
+        question: "What products do you use?",
+        answer: "We use non-toxic, plant-based products from Jersey Girl Creations LLC, a local family-owned business focused on environmental safety and guest wellness. All products are kid-safe.",
+      },
+      {
+        question: "Do you offer a military or teacher discount?",
+        answer: "Yes! We offer 10% off for all Military personnel, Veterans, and Teachers. Please mention this at the time of booking.",
       },
     ],
   },
@@ -36,23 +40,27 @@ const faqGroups = [
     items: [
       {
         question: "How do I book a birthday party?",
-        answer: "All birthday packages must be booked online. Visit our Packages page to browse options and book your date. A non-refundable deposit is required to secure your reservation.",
+        answer: "All birthday packages must be booked online, no later than 2 days in advance. A $150 non-refundable deposit is required to secure your date. Visit our Packages page to book.",
       },
       {
         question: "When are birthday parties available?",
         answer: "Birthday party packages are available on weekends only (Saturday and Sunday).",
       },
       {
-        question: "How many guests can attend a party?",
-        answer: "Each package accommodates a different number of guests, ranging from 6 to 10 depending on the package. Additional guests can be added for a per-guest fee.",
+        question: "How many guests are included in each package?",
+        answer: "Each birthday package includes 5 children. You may add up to 3 additional guests for $75 per guest.",
+      },
+      {
+        question: "What is the cancellation and rescheduling policy?",
+        answer: "All deposits are non-refundable. We require 2 weeks' notice to reschedule your party — otherwise your deposit will be forfeited.",
       },
       {
         question: "Can I bring a birthday cake or outside food?",
-        answer: "Yes, you may bring outside food or a birthday cake, but a $25 outside food fee applies.",
+        answer: "Yes! Outside food and birthday cakes are welcome with a $25 outside food fee. Outside food must be approved in advance.",
       },
       {
         question: "Can I bring my own nail polish or beauty products?",
-        answer: "Outside beauty products are allowed with a $50 outside product fee. We recommend using our non-toxic, kid-safe products for the safest experience.",
+        answer: "Outside beauty products are allowed with a $50 outside product fee. We recommend our non-toxic, plant-based products for the best experience.",
       },
       {
         question: "Is gratuity included?",
@@ -62,23 +70,31 @@ const faqGroups = [
         question: "What if guests have gel nail polish?",
         answer: "A $20 gel nail polish removal fee applies per guest if gel removal is needed before their service.",
       },
+      {
+        question: "Can I add activities or food to my party package?",
+        answer: "Absolutely! We offer party add-ons including food (pizza, cupcakes, ice cream, chocolate covered fruit), activity packages (art party, jewelry making, s'mores, diva yoga, Girl Scout badge events), spa gift bags, and extra time. See our Packages page for full details.",
+      },
     ],
   },
   {
-    category: "Mini Services",
+    category: "Glam & Mini Services",
     emoji: "💅",
     items: [
       {
         question: "Do I need to book mini services in advance?",
-        answer: "Yes, all mini packages and services must be booked online or by phone in advance to ensure availability.",
+        answer: "Yes, all glam and mini packages must be booked online in advance to ensure availability.",
       },
       {
         question: "Can a parent participate in the experience?",
-        answer: "Absolutely! Our Mommy & Me and Daddy & Me packages are designed for parents and children to enjoy together.",
+        answer: "Absolutely! Our Mommy & Me and Daddy & Me packages are designed specifically for parents and children to enjoy together.",
       },
       {
-        question: "What mini services are available?",
-        answer: "We offer a range of à la carte services including mini manicures, mini pedicures, mini facials, hair styling, makeup application, glitter tattoos, and more. See our Services page for the full menu.",
+        question: "What glam packages are available?",
+        answer: "We offer the Single Diva Package ($165), BFF Package ($230.95), Mommy & Me ($250), Daddy & Me Day ($250), and the Mani & Pedi Express ($55). See our Services page for details.",
+      },
+      {
+        question: "Do I need a minimum number of guests?",
+        answer: "No minimum is required for glam packages. Our packages accommodate individuals, pairs, and small groups.",
       },
     ],
   },
@@ -88,7 +104,7 @@ const faqGroups = [
     items: [
       {
         question: "Is the deposit refundable?",
-        answer: "No, the deposit required at booking is non-refundable. It secures your party date and time slot.",
+        answer: "No. The $150 deposit required at booking is non-refundable. It secures your party date and time slot.",
       },
       {
         question: "What if my child has allergies?",
@@ -96,7 +112,7 @@ const faqGroups = [
       },
       {
         question: "What is the disclaimer for services?",
-        answer: "All services at Little Divas Day Spa are for entertainment purposes only. Services are not performed by licensed cosmetologists. All products used are non-toxic and kid-safe.",
+        answer: "All services at Little Divas Day Spa are for entertainment purposes only. Services are not performed by licensed cosmetologists. All products used are non-toxic and plant-based.",
       },
     ],
   },

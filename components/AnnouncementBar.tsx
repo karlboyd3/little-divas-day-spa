@@ -6,7 +6,7 @@ export default function AnnouncementBar() {
         <span className="hidden sm:inline text-white/50">·</span>
         <span>🎂 Birthday packages: weekends only</span>
         <span className="hidden sm:inline text-white/50">·</span>
-        <span>🎁 Gift certificates available</span>
+        <span>🎖️ 10% off for Military, Veterans & Teachers</span>
       </div>
     </div>
   );

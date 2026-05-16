@@ -87,12 +87,22 @@ export default function ShopPage() {
                   </div>
                 </div>
 
-                <a
-                  href="tel:7036000000"
-                  className="mt-8 inline-flex font-sans font-bold text-sm bg-gold text-white px-8 py-3.5 rounded-full hover:bg-plum transition-colors"
-                >
-                  Call to Purchase: (703) 600-0000
-                </a>
+                <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://www.littledivasdayspa.com/shop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex font-sans font-bold text-sm bg-gold text-white px-8 py-3.5 rounded-full hover:bg-plum transition-colors"
+                  >
+                    Shop Gift Certificates →
+                  </a>
+                  <a
+                    href="tel:7037533200"
+                    className="inline-flex font-sans font-bold text-sm border-2 border-gold text-plum px-8 py-3.5 rounded-full hover:bg-gold hover:text-white transition-colors"
+                  >
+                    Call: (703) 753-3200
+                  </a>
+                </div>
               </div>
             </div>
           </div>

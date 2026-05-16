@@ -56,15 +56,15 @@ export default function Footer() {
             <p className="font-sans font-bold text-xs text-diva-pink tracking-widest uppercase mb-3">Visit Us</p>
             <div className="space-y-2 font-sans text-sm text-white/70">
               <p>Haymarket, Virginia</p>
-              <a href="tel:7036000000" className="block hover:text-white transition-colors">(703) 600-0000</a>
-              <a href="mailto:info@littledivasdayspa.com" className="block hover:text-white transition-colors">
-                info@littledivasdayspa.com
+              <a href="tel:7037533200" className="block hover:text-white transition-colors">(703) 753-3200</a>
+              <a href="mailto:littledivashaymarket@gmail.com" className="block hover:text-white transition-colors">
+                littledivashaymarket@gmail.com
               </a>
               <div className="pt-1">
                 <p className="font-semibold text-white/50 text-xs uppercase tracking-widest mb-1">Hours</p>
-                <p>Tue–Fri: 10 AM – 7 PM</p>
-                <p>Sat–Sun: 10 AM – 6 PM</p>
-                <p>Mon: Closed</p>
+                <p>Mon, Thu, Fri: 2–6 PM</p>
+                <p>Sat–Sun: 11 AM–6 PM</p>
+                <p>Tue–Wed: Closed</p>
               </div>
             </div>
           </div>

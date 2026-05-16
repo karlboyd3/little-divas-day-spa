@@ -8,9 +8,10 @@ interface Props {
   highlights: string[];
   featured?: boolean;
   badge?: string;
+  bookingUrl?: string;
 }
 
-export default function PackageCard({ name, duration, price, guests, highlights, featured, badge }: Props) {
+export default function PackageCard({ name, duration, price, guests, highlights, featured, badge, bookingUrl }: Props) {
   return (
     <div
       className={`relative rounded-3xl p-6 flex flex-col gap-4 border transition-shadow hover:shadow-xl ${
@@ -44,8 +45,10 @@ export default function PackageCard({ name, duration, price, guests, highlights,
 
       <div className="mt-auto flex items-center justify-between pt-4 border-t border-current/10">
         <span className={`font-display font-bold text-2xl ${featured ? "text-white" : "text-diva-pink"}`}>{price}</span>
-        <Link
-          href="/packages"
+        <a
+          href={bookingUrl ?? "https://www.littledivasdayspa.com/birthdaypackages"}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`font-sans text-sm font-bold px-5 py-2 rounded-full transition-colors ${
             featured
               ? "bg-white text-diva-pink hover:bg-blush"
@@ -53,7 +56,7 @@ export default function PackageCard({ name, duration, price, guests, highlights,
           }`}
         >
           Book Now
-        </Link>
+        </a>
       </div>
     </div>
   );

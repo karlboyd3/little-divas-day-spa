@@ -11,38 +11,43 @@ const birthdayPackages = [
     name: "Simply Sweet",
     duration: "2 hrs",
     price: "$385",
-    guests: "Up to 6 guests",
+    guests: "5 children",
     highlights: ["Mini mani & pedi", "Lip gloss application", "Glitter tattoos", "Party favors"],
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/simply-sweet",
   },
   {
     name: "Seriously Sassy",
     duration: "2 hrs 50 min",
     price: "$465",
-    guests: "Up to 6 guests",
+    guests: "5 children",
     highlights: ["Mani, pedi & facial", "Makeup application", "Hair styling", "Spa robe & crown"],
     featured: true,
     badge: "Most Popular",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/seriously-sassy",
   },
   {
     name: "Toe-Tally Diva",
     duration: "3 hrs",
     price: "$525",
-    guests: "Up to 6 guests",
+    guests: "5 children",
     highlights: ["Full spa treatment", "Mani, pedi, facial & massage", "Full glam makeup", "Photo moment setup"],
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/toe-tally-diva",
   },
   {
     name: "Must-Have Makeover",
     duration: "3 hrs 45 min",
     price: "$600",
-    guests: "Up to 8 guests",
+    guests: "5 children",
     highlights: ["Ultimate spa experience", "All services included", "Themed décor", "Take-home spa kit"],
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/must-have-makeover-experience",
   },
   {
     name: "Create Your Own",
     duration: "4 hrs",
     price: "$780",
-    guests: "Up to 10 guests",
+    guests: "5 children",
     highlights: ["Custom theme party", "Mix & match services", "Dedicated party host", "Fully personalized"],
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/create-your-own-theme-party",
   },
 ];
 
@@ -50,32 +55,37 @@ const miniServices = [
   {
     name: "Single Diva Package",
     price: "$165",
-    description: "A solo spa day for one little diva — mani, pedi, and a mini facial.",
+    description: "A 2-hour solo spa experience for one little diva — mani, pedi, and a mini facial.",
     emoji: "👑",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/single-diva-package",
   },
   {
     name: "BFF Package",
     price: "$230.95",
-    description: "Two besties enjoy manis, pedis, and a fun spa experience together.",
+    description: "1.5-hour experience for two besties — manis, pedis, and all the glam fun.",
     emoji: "💅",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/bff-package",
   },
   {
     name: "Mommy & Me",
     price: "$250",
-    description: "A relaxing spa experience for mom and her little one to share.",
+    description: "A 1.5-hour bonding spa experience for mom and her little one to enjoy together.",
     emoji: "💗",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/mommy-me-package",
   },
   {
     name: "Daddy & Me Day",
     price: "$250",
-    description: "A special spa day designed for dads and their little divas.",
+    description: "A special 1.5-hour spa day for dads and their little divas — unforgettable fun.",
     emoji: "🎀",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/daddy-me-day",
   },
   {
     name: "Mani & Pedi Express",
     price: "$55",
-    description: "Quick and fun mani-pedi service for your little one.",
+    description: "A quick 1 hr 15 min mani-pedi treat for your little one.",
     emoji: "✨",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/mani-pedi-express-service",
   },
 ];
 
@@ -90,20 +100,20 @@ const whyUs = [
 
 const homeFAQs = [
   {
-    question: "What is the minimum age for services?",
-    answer: "We welcome little divas ages 3 and up for all of our services and parties.",
+    question: "What ages are appropriate for services?",
+    answer: "Little Divas is for girls of all ages! Our minimum service age is 3 years old.",
   },
   {
-    question: "Are your products safe for kids?",
-    answer: "Yes! We use only non-toxic, kid-friendly products in every service. Please notify us of any allergies or sensitivities before your visit.",
+    question: "What products do you use?",
+    answer: "We use non-toxic, plant-based products from Jersey Girl Creations LLC — a local family-owned business focused on environmental safety. Please notify us of any allergies before your visit.",
   },
   {
     question: "How do I book a birthday party?",
-    answer: "All birthday packages must be booked online. A non-refundable deposit is required to secure your date. Birthday packages are available on weekends only.",
+    answer: "All birthday packages must be booked online, no later than 2 days in advance. A $150 non-refundable deposit is required to secure your date. Birthday packages are available on weekends only.",
   },
   {
     question: "Are your staff licensed cosmetologists?",
-    answer: "Our services are for entertainment purposes only and are not performed by licensed cosmetologists. We focus on fun, confidence-building experiences for kids.",
+    answer: "Our services are for entertainment purposes only and are not performed by licensed cosmetologists. We focus on fun, confidence-building experiences for kids in Haymarket, VA.",
   },
 ];
 
@@ -133,12 +143,14 @@ export default function HomePage() {
               Kids&apos; spa parties, mini makeovers, birthday packages, and glam experiences in Haymarket, Virginia.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/packages"
+              <a
+                href="https://www.littledivasdayspa.com/birthdaypackages"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-sans font-bold text-sm bg-diva-pink text-white px-8 py-4 rounded-full hover:bg-plum transition-colors shadow-lg text-center"
               >
                 Book a Party
-              </Link>
+              </a>
               <Link
                 href="/packages"
                 className="font-sans font-bold text-sm border-2 border-plum/20 text-plum px-8 py-4 rounded-full hover:border-diva-pink hover:text-diva-pink transition-colors text-center"
@@ -310,14 +322,14 @@ export default function HomePage() {
           <div className="hidden sm:block w-px h-8 bg-blush" />
           <div>
             <p className="font-sans text-xs text-plum/40 uppercase tracking-widest mb-1">Phone</p>
-            <a href="tel:7036000000" className="font-sans font-semibold text-plum hover:text-diva-pink transition-colors">
-              (703) 600-0000
+            <a href="tel:7037533200" className="font-sans font-semibold text-plum hover:text-diva-pink transition-colors">
+              (703) 753-3200
             </a>
           </div>
           <div className="hidden sm:block w-px h-8 bg-blush" />
           <div>
             <p className="font-sans text-xs text-plum/40 uppercase tracking-widest mb-1">Hours</p>
-            <p className="font-sans font-semibold text-plum">Tue–Fri 10–7 · Sat–Sun 10–6</p>
+            <p className="font-sans font-semibold text-plum">Mon/Thu/Fri 2–6 · Sat–Sun 11–6</p>
           </div>
           <div className="hidden sm:block w-px h-8 bg-blush" />
           <Link href="/contact" className="font-sans text-sm font-bold text-diva-pink hover:text-plum transition-colors">

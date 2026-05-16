@@ -8,7 +8,7 @@ export const metadata = {
 
 const values = [
   { icon: "💗", title: "Kid-First Design", desc: "Everything about our space is designed with kids in mind — from the décor to the products we use." },
-  { icon: "🌿", title: "Non-Toxic Always", desc: "We are committed to using only non-toxic, kid-safe products in every single service." },
+  { icon: "🌿", title: "Non-Toxic Always", desc: "We use only non-toxic, plant-based products from Jersey Girl Creations LLC — a local family-owned business." },
   { icon: "✨", title: "Confidence & Joy", desc: "Our goal is for every child to leave feeling beautiful, confident, and celebrated." },
   { icon: "👨‍👩‍👧", title: "Family-Centered", desc: "We welcome the whole family — moms, dads, and even grandparents can join in the fun." },
 ];
@@ -51,13 +51,16 @@ export default function AboutPage() {
               />
               <div className="space-y-4 mt-6 font-sans text-plum/70 leading-relaxed">
                 <p>
-                  Little Divas Day Spa was created to give kids a place where they feel truly special. We believe every child deserves a moment to shine — whether it&apos;s their birthday, a special occasion, or just a fun day out.
+                  Little Divas Day Spa was created with one belief at its heart: <em className="text-plum font-semibold">&quot;Beauty illuminates from the inside out.&quot;</em> We want to empower every girl we meet to display her B.E.A.U.T.Y — and have an absolute blast doing it.
                 </p>
                 <p>
-                  We offer a wide range of kid-friendly spa experiences, from mini manis and pedis to full birthday party packages with themed décor, spa robes, and all the glam details.
+                  We offer birthday party packages, glam mini experiences, and special events for kids in a safe, welcoming environment designed entirely around children and their families.
                 </p>
                 <p>
-                  Our space is warm, welcoming, and designed entirely around the needs of children and their families. Safety and fun are our top priorities — always.
+                  Our vision is to boost kids&apos; confidence through social engagement and joyful activities, while strengthening family bonds. Whether it&apos;s a birthday, a special occasion, or just a fun day — every visit is a memory in the making.
+                </p>
+                <p>
+                  We use only non-toxic, plant-based products from <strong className="text-plum">Jersey Girl Creations LLC</strong>, a local family-owned business focused on environmental safety and guest wellness.
                 </p>
               </div>
             </div>

@@ -12,8 +12,9 @@ const packages = [
     name: "Simply Sweet",
     duration: "2 hrs",
     price: "$385",
-    guests: "Up to 6 guests",
-    addlGuest: "$40/additional guest",
+    guests: "5 children",
+    addlGuest: "$75/additional guest (max 3)",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/simply-sweet",
     highlights: [
       "Mini manicure",
       "Mini pedicure",
@@ -26,9 +27,10 @@ const packages = [
     name: "Seriously Sassy",
     duration: "2 hrs 50 min",
     price: "$465",
-    guests: "Up to 6 guests",
-    addlGuest: "$45/additional guest",
+    guests: "5 children",
+    addlGuest: "$75/additional guest (max 3)",
     badge: "Most Popular",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/seriously-sassy",
     highlights: [
       "Manicure & pedicure",
       "Mini facial",
@@ -42,8 +44,9 @@ const packages = [
     name: "Toe-Tally Diva",
     duration: "3 hrs",
     price: "$525",
-    guests: "Up to 6 guests",
-    addlGuest: "$50/additional guest",
+    guests: "5 children",
+    addlGuest: "$75/additional guest (max 3)",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/toe-tally-diva",
     highlights: [
       "Manicure & pedicure",
       "Facial & mini massage",
@@ -58,8 +61,9 @@ const packages = [
     name: "Must-Have Makeover Experience",
     duration: "3 hrs 45 min",
     price: "$600",
-    guests: "Up to 8 guests",
-    addlGuest: "$55/additional guest",
+    guests: "5 children",
+    addlGuest: "$75/additional guest (max 3)",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/must-have-makeover-experience",
     highlights: [
       "Ultimate full spa treatment",
       "Mani, pedi, facial, and massage",
@@ -74,8 +78,9 @@ const packages = [
     name: "Create Your Own Theme Party",
     duration: "4 hrs",
     price: "$780",
-    guests: "Up to 10 guests",
-    addlGuest: "$60/additional guest",
+    guests: "5 children",
+    addlGuest: "$75/additional guest (max 3)",
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/create-your-own-theme-party",
     highlights: [
       "Fully custom theme of your choice",
       "Mix & match any services",
@@ -89,15 +94,17 @@ const packages = [
 ];
 
 const policies = [
-  { label: "Booking", text: "All birthday packages must be booked online. Birthday packages are available on weekends only." },
-  { label: "Deposit", text: "A non-refundable deposit is required at the time of booking to secure your party date." },
-  { label: "Outside Food", text: "A $25 fee applies if you bring outside food or a cake." },
+  { label: "Booking", text: "All birthday packages must be booked online, no later than 2 days in advance. Birthday packages are available on weekends only." },
+  { label: "Deposit", text: "A $150 non-refundable deposit is required at the time of booking to secure your party date. The balance is due on the day of the party." },
+  { label: "Rescheduling", text: "We require 2 weeks' notice to reschedule your party. Otherwise, your deposit will be forfeited." },
+  { label: "Additional Guests", text: "Each package includes 5 children. Additional guests are $75 each, up to 3 extra guests maximum." },
+  { label: "Outside Food", text: "A $25 fee applies if you bring outside food or a birthday cake. Outside food must be approved in advance." },
   { label: "Outside Products", text: "A $50 fee applies if you bring outside nail polish or beauty products." },
-  { label: "Gel Removal", text: "A $20 gel nail polish removal fee applies per guest if needed." },
-  { label: "Gratuity", text: "A 20% gratuity is added to all party packages." },
-  { label: "Allergies", text: "Please notify us of any allergies or sensitivities before your event." },
-  { label: "Age", text: "Minimum service age is 3 years old." },
-  { label: "Disclaimer", text: "Services are for entertainment purposes only and are not performed by licensed cosmetologists. All products are non-toxic." },
+  { label: "Gel Removal", text: "A $20 gel nail polish removal fee applies per guest if needed before services." },
+  { label: "Gratuity", text: "A 20% gratuity is automatically added to all party packages." },
+  { label: "Military & Teachers", text: "10% discount for all Military personnel, Veterans, and Teachers. Must be mentioned at booking." },
+  { label: "Allergies", text: "Please notify us of any allergies or sensitivities before your event so we can accommodate safely." },
+  { label: "Disclaimer", text: "Services are for entertainment purposes only and are not performed by licensed cosmetologists. We use non-toxic, plant-based products from Jersey Girl Creations LLC." },
 ];
 
 export default function PackagesPage() {
@@ -162,8 +169,10 @@ export default function PackagesPage() {
                   <span className={`font-display font-bold text-3xl ${i === 1 ? "text-white" : "text-diva-pink"}`}>
                     {pkg.price}
                   </span>
-                  <Link
-                    href="#book"
+                  <a
+                    href={pkg.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`font-sans text-sm font-bold px-6 py-2.5 rounded-full transition-colors ${
                       i === 1
                         ? "bg-white text-diva-pink hover:bg-blush"
@@ -171,7 +180,7 @@ export default function PackagesPage() {
                     }`}
                   >
                     Book Now
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -185,13 +194,51 @@ export default function PackagesPage() {
               Click below to visit our booking page and reserve your party date. A non-refundable deposit is required to secure your spot. Birthday parties are available on weekends only.
             </p>
             <a
-              href="https://www.littledivasdayspa.com"
+              href="https://www.littledivasdayspa.com/birthdaypackages"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex font-sans font-bold text-sm bg-diva-pink text-white px-8 py-3.5 rounded-full hover:bg-plum transition-colors"
             >
               Book Online →
             </a>
+          </div>
+
+          {/* Party Add-ons */}
+          <div className="mb-20">
+            <SectionTitle
+              eyebrow="Extras"
+              title="Party add-ons & food"
+              subtitle="Enhance your party with food, activities, and spa gift bags. Add-ons must be paired with a package."
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+              <div className="bg-white rounded-2xl border border-blush p-5">
+                <p className="font-sans text-xs font-bold text-diva-pink tracking-widest uppercase mb-3">Food Options</p>
+                <ul className="space-y-2 font-sans text-sm text-plum/70">
+                  <li className="flex justify-between"><span>Pizza (Papa Johns)</span><span className="font-semibold text-plum">$17.49</span></li>
+                  <li className="flex justify-between"><span>Ice Cream Cups</span><span className="font-semibold text-plum">$1.50/cup</span></li>
+                  <li className="flex justify-between"><span>Cupcakes (min. 6)</span><span className="font-semibold text-plum">$3.00 each</span></li>
+                  <li className="flex justify-between"><span>Chocolate Covered Fruit</span><span className="font-semibold text-plum">$30.00/dozen</span></li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-2xl border border-blush p-5">
+                <p className="font-sans text-xs font-bold text-diva-pink tracking-widest uppercase mb-3">Activity Add-Ons</p>
+                <ul className="space-y-2 font-sans text-sm text-plum/70">
+                  <li className="flex justify-between"><span>Little Diva Art Party</span><span className="font-semibold text-plum">$100 / 5 kids</span></li>
+                  <li className="flex justify-between"><span>Jewelry Making</span><span className="font-semibold text-plum">$75 / 5 kids</span></li>
+                  <li className="flex justify-between"><span>S&apos;mores Party</span><span className="font-semibold text-plum">$65 / 5 kids</span></li>
+                  <li className="flex justify-between"><span>Diva Yoga Party</span><span className="font-semibold text-plum">$75 / 5 kids</span></li>
+                  <li className="flex justify-between"><span>Girl Scout Badge Event</span><span className="font-semibold text-plum">Varies</span></li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-2xl border border-blush p-5">
+                <p className="font-sans text-xs font-bold text-diva-pink tracking-widest uppercase mb-3">Extras</p>
+                <ul className="space-y-2 font-sans text-sm text-plum/70">
+                  <li className="flex justify-between"><span>Spa Gift Bag</span><span className="font-semibold text-plum">$10/bag</span></li>
+                  <li className="flex justify-between"><span>Additional Time (30 min)</span><span className="font-semibold text-plum">$50</span></li>
+                  <li className="flex justify-between"><span>Party Room (non-birthday)</span><span className="font-semibold text-plum">$85 / 30 min</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Policies */}

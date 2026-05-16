@@ -12,45 +12,49 @@ const miniPackages = [
     emoji: "👑",
     name: "Single Diva Package",
     price: "$165",
-    duration: "~60 min",
-    description: "A solo spa experience for one little diva. Includes a mini manicure, mini pedicure, and a mini facial — the perfect treat for any special day.",
+    duration: "2 hrs",
+    description: "A solo spa experience for one little diva — the perfect treat for any special day.",
     includes: ["Mini manicure", "Mini pedicure", "Mini facial", "Lip gloss", "Party favor"],
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/single-diva-package",
   },
   {
     emoji: "💅",
     name: "BFF Package",
     price: "$230.95",
-    duration: "~60 min",
-    description: "Two besties enjoying the diva life together. Share the fun with manis, pedis, and the full mini spa experience — because everything is better with your bestie.",
+    duration: "1 hr 30 min",
+    description: "Two besties enjoying the diva life together — because everything is better with your bestie.",
     includes: ["Mini manicure (x2)", "Mini pedicure (x2)", "Lip gloss (x2)", "Party favors"],
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/bff-package",
   },
   {
     emoji: "💗",
     name: "Mommy & Me Package",
     price: "$250",
-    duration: "~75 min",
-    description: "A beautiful bonding experience for mom and daughter. Relax and enjoy a little pampering together — the perfect special occasion treat.",
-    includes: ["Mini manicure (x2)", "Mini pedicure (x2)", "Facial (x1)", "Lip gloss", "Take-home favor"],
+    duration: "1 hr 30 min",
+    description: "A beautiful bonding experience for mom and daughter — relax and enjoy a little pampering together.",
+    includes: ["Mini manicure (x2)", "Mini pedicure (x2)", "Spa treatment", "Lip gloss", "Take-home favor"],
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/mommy-me-package",
   },
   {
     emoji: "🎀",
     name: "Daddy & Me Day",
     price: "$250",
-    duration: "~75 min",
-    description: "Who says spa days are just for moms? Dads and daughters can share in the fun too — a unique and unforgettable bonding experience.",
-    includes: ["Mini manicure (x2)", "Mini pedicure (x2)", "Facial (x1)", "Lip gloss", "Take-home favor"],
+    duration: "1 hr 30 min",
+    description: "Who says spa days are just for moms? Dads and daughters share in the fun — a unique and unforgettable bonding experience.",
+    includes: ["Mini manicure (x2)", "Mini pedicure (x2)", "Spa treatment", "Lip gloss", "Take-home favor"],
+    bookingUrl: "https://www.littledivasdayspa.com/booking-calendar/daddy-me-day",
   },
 ];
 
 const aLaCarteServices = [
-  { name: "Mani & Pedi Express", price: "$55", desc: "Quick and fun mini mani-pedi for your little one." },
-  { name: "Mini Manicure", price: "$25", desc: "A sweet little manicure with non-toxic polish." },
-  { name: "Mini Pedicure", price: "$30", desc: "Relaxing and fun mini pedicure with a foot soak." },
-  { name: "Mini Facial", price: "$30", desc: "A gentle, kid-friendly facial using non-toxic products." },
-  { name: "Lip Gloss Application", price: "$10", desc: "Fun flavored lip gloss application." },
-  { name: "Glitter Tattoo", price: "$10", desc: "Sparkly temporary glitter tattoo design." },
-  { name: "Hair Styling", price: "$20", desc: "Fun updo or style for your little diva." },
-  { name: "Makeup Application", price: "$20", desc: "Light, fun makeup using kid-safe products." },
+  { name: "Mani & Pedi Express", price: "$55", desc: "1 hr 15 min express mani-pedi for your little one." },
+  { name: "Manicure", price: "$35", desc: "Light filing, buffing, massage & polish application." },
+  { name: "Pedicure", price: "$35", desc: "Light filing, buffing, foot massage & polish application." },
+  { name: "Mini Facial", price: "$15", desc: "A gentle, kid-friendly facial using non-toxic products." },
+  { name: "Light Makeup", price: "$20", desc: "Fun, light makeup application using kid-safe products." },
+  { name: "Spa Gift Bag", price: "$10", desc: "Take-home spa gift bag — perfect party favor." },
+  { name: "Additional Time", price: "$50", desc: "Add 30 extra minutes to any service or party." },
+  { name: "Party Room Rental", price: "$85/30 min", desc: "Party room usage for non-birthday package events." },
 ];
 
 export default function ServicesPage() {
@@ -100,14 +104,16 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href="/contact"
+                  <a
+                    href={pkg.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`mt-auto font-sans text-sm font-bold px-6 py-2.5 rounded-full text-center transition-colors ${
                       i === 0 ? "bg-white text-diva-pink hover:bg-blush" : "bg-diva-pink text-white hover:bg-plum"
                     }`}
                   >
                     Book This Experience
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>

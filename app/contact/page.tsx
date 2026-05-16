@@ -7,10 +7,10 @@ export const metadata = {
 };
 
 const hours = [
-  { day: "Monday", hours: "Closed" },
-  { day: "Tuesday – Friday", hours: "10:00 AM – 7:00 PM" },
-  { day: "Saturday", hours: "10:00 AM – 6:00 PM" },
-  { day: "Sunday", hours: "10:00 AM – 6:00 PM" },
+  { day: "Monday", hours: "2:00 PM – 6:00 PM" },
+  { day: "Tuesday – Wednesday", hours: "Closed" },
+  { day: "Thursday – Friday", hours: "2:00 PM – 6:00 PM" },
+  { day: "Saturday – Sunday", hours: "11:00 AM – 6:00 PM" },
 ];
 
 const contactItems = [
@@ -21,8 +21,8 @@ const contactItems = [
       </svg>
     ),
     label: "Phone",
-    value: "(703) 600-0000",
-    href: "tel:7036000000",
+    value: "(703) 753-3200",
+    href: "tel:7037533200",
   },
   {
     icon: (
@@ -31,8 +31,8 @@ const contactItems = [
       </svg>
     ),
     label: "Email",
-    value: "info@littledivasdayspa.com",
-    href: "mailto:info@littledivasdayspa.com",
+    value: "littledivashaymarket@gmail.com",
+    href: "mailto:littledivashaymarket@gmail.com",
   },
   {
     icon: (
@@ -170,7 +170,7 @@ export default function ContactPage() {
               <p className="font-display font-bold text-white text-xl mb-2">Ready to book?</p>
               <p className="font-sans text-white/70 text-sm mb-4">All bookings are made online. Birthday parties on weekends only.</p>
               <a
-                href="https://www.littledivasdayspa.com"
+                href="https://www.littledivasdayspa.com/birthdaypackages"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex font-sans font-bold text-sm bg-white text-diva-pink px-7 py-3 rounded-full hover:bg-blush transition-colors"
